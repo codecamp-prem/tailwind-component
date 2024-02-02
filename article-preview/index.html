@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Rokkitt:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Log-In Modal Tailwind Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Mulish", "sans-serif"],
+            mono: ["Rokkitt", "monospace"],
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="min-h-screen bg-gray-100 p-12 flex justify-center items-center">
+      <div
+        class="max-w-[24rem] md:max-w-3xl bg-white rounded-xl flex flex-col md:flex-row"
+      >
+        <div class="flex-[40%]">
+          <img
+            src="images/image1.jpg"
+            alt="image alt"
+            class="w-full h-full object-cover rounded-t-xl md:rounded-t-none md:rounded-l-xl"
+          />
+        </div>
+        <div class="p-9 flex-[60%]">
+          <h2 class="text-[1.4rem] leading-snug font-bold text-gray-600">
+            Shift the overall look and feel by applying Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit. Qnemo quia ratione quisquam animi
+            magni omnis reprehenderit?
+          </h2>
+          <p class="mt-3 text-gray-500 text-sm">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quae
+            itaque perferendis, provident quaerat repellat saepe quas tempora
+            beatae officiis nihil error maiores excepturi consequatur tempore
+            exercitationem similique consequuntur reprehenderit?
+          </p>
+          <div class="mt-6 leading-gone flex items-center">
+            <img
+              src="images/image-patrick.jpg"
+              alt="user"
+              class="h-11 w-11 rounded-full mr-4"
+            />
+            <div>
+              <p class="text-sm font-bold text-gray-600">John Doe</p>
+              <span class="text-sm text-gray-400">29 Feb 1369</span>
+            </div>
+            <div class="p-3 bg-gray-300 rounded-full ml-auto">
+              <img src="images/icon-share.svg" alt="share icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
