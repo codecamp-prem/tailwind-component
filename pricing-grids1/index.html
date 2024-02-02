@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Rokkitt:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Grid Modal Tailwind Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const colors = require("tailwindcss/colors");
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Mulish", "sans-serif"],
+            mono: ["Rokkitt", "monospace"],
+          },
+          colors: {
+            gray: colors.blueGray,
+            teal: colors.teal,
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply antialiased text-gray-800 p-12;
+        }
+      }
+      @layer components {
+        .container {
+          @apply max-w-3xl w-auto my-8 mx-auto;
+        }
+        h1 {
+          @apply font-bold text-3xl text-center;
+        }
+        .report {
+          @apply m-4 p-6 h-64 text-center bg-teal-200 rounded-2xl;
+        }
+        .report > span:nth-child(1) {
+          @apply text-lg;
+        }
+        .report > span:nth-child(2) {
+          @apply font-bold text-4xl;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Daily Average Stats</h1>
+    <div class="container flex flex-wrap">
+      <div class="report flex-1 min-w-[12rem] flex flex-col justify-between">
+        <span>Avg. Steps/day</span>
+        <span>9,340</span>
+        <div>
+          <p><strong>+355</strong></p>
+          <span>last month</span>
+        </div>
+      </div>
+      <div class="report flex-1 min-w-[12rem] flex flex-col justify-between">
+        <span>Minutes /day</span>
+        <span>94</span>
+        <div>
+          <p><strong>+12</strong></p>
+          <span>last month</span>
+        </div>
+      </div>
+      <div class="report flex-1 min-w-[12rem] flex flex-col justify-between">
+        <span>kCal Burnt /day</span>
+        <span>9,340</span>
+        <div>
+          <p><strong>+2</strong></p>
+          <span>last month</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
