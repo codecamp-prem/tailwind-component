@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Rokkitt:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Services Grid Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const colors = require("tailwindcss/colors");
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Mulish", "sans-serif"],
+            mono: ["Rokkitt", "monospace"],
+          },
+          colors: {
+            teal: colors.teal,
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-gray-100 text-gray-800;
+        }
+      }
+
+      @layer components {
+        .container {
+          @apply max-w-7xl mx-auto p-8;
+        }
+        h2 {
+          @apply font-bold text-2xl;
+        }
+        .item {
+          @apply bg-white rounded-lg;
+        }
+        .item img {
+          @apply w-full h-48 object-cover rounded-t-lg;
+        }
+        .item > div {
+          @apply p-6;
+        }
+        p {
+          @apply mt-4 mb-3;
+        }
+        a {
+          @apply text-lg font-bold text-purple-600;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--gap-4 if gap-x-4 gap-y-4 -->
+    <div class="container grid sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8">
+      <div class="item">
+        <img src="https://picsum.photos/400/300" alt="" />
+        <div>
+          <h2>Blog title 1</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+            assumenda porro inventore repellendus ipsum.
+          </p>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/300?1" alt="" />
+        <div>
+          <h2>Blog title 2</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+            assumenda porro inventore repellendus ipsum.
+          </p>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/300?2" alt="" />
+        <div class="desc">
+          <h2>Blog title 3</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+            assumenda porro inventore repellendus ipsum.
+          </p>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/300?3" alt="" />
+        <div class="desc">
+          <h2>Blog title 4</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+            assumenda porro inventore repellendus ipsum.
+          </p>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/300?4" alt="" />
+        <div class="desc">
+          <h2>Blog title 5</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+            assumenda porro inventore repellendus ipsum.
+          </p>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/400/300?5" alt="" />
+        <div class="desc">
+          <h2>Blog title 6</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+            assumenda porro inventore repellendus ipsum.
+          </p>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
