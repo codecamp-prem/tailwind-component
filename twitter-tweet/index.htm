@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Rokkitt:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Twitter Tweet Design Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const colors = require("tailwindcss/colors");
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Mulish", "sans-serif"],
+            mono: ["Rokkitt", "monospace"],
+          },
+          colors: {
+            gray: colors.blueGray,
+            teal: colors.teal,
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply min-w-[24rem] text-[0.9rem] text-gray-800;
+        }
+      }
+      @layer components {
+        .container {
+          @apply max-w-xl my-24 mx-auto p-3 border border-gray-200;
+        }
+        .container > img {
+          @apply h-12 w-12 rounded-full mr-3;
+        }
+        a {
+          @apply text-gray-500;
+        }
+        a > strong {
+          @apply text-gray-800;
+        }
+        .options {
+          @apply h-4;
+        }
+        .actions {
+          @apply max-w-md mt-2;
+        }
+        .actions img {
+          @apply h-[1.1rem] inline-block align-middle mr-2;
+        }
+        .actions span {
+          @apply text-[0.8rem] text-gray-600;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container flex">
+      <img
+        src="https://pbs.twimg.com/profile_images/1504677040293036033/cWXxcTaz_200x200.jpg"
+        alt=""
+      />
+      <div>
+        <div class="tweet-info flex">
+          <div>
+            <a href="#">
+              <strong>Shruti Balasa</strong>
+              <span>@shrutibalasa</span>
+            </a>
+            &middot;
+            <a href="#">Sep 26</a>
+          </div>
+          <img
+            class="options ml-auto"
+            src="https://res.cloudinary.com/thirus/image/upload/v1632940964/logos/options_wdtupw.svg"
+            alt=""
+          />
+        </div>
+        <div class="tweet">
+          You are amazing if you take time to comment on a tweet or YouTube
+          video or a blogpost that has helped you! 🙌
+        </div>
+        <div class="actions flex justify-between">
+          <div>
+            <img
+              src="https://res.cloudinary.com/thirus/image/upload/v1632940688/logos/reply_ts2dvv.svg"
+              alt=""
+            />
+            <span>20</span>
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/thirus/image/upload/v1632940688/logos/retweet_wkdf6j.svg"
+              alt=""
+            />
+            <span>17</span>
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/thirus/image/upload/v1632940688/logos/like_zmb4tf.svg"
+              alt=""
+            />
+            <span>215</span>
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/thirus/image/upload/v1632940688/logos/share_rgaloj.svg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://res.cloudinary.com/thirus/image/upload/v1632940964/logos/stats_jt2vsb.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
