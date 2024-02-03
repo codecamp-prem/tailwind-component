@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Rokkitt:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Making Everything Center Horizontally</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const colors = require("tailwindcss/colors");
+      tailwind.config = {
+        mode: "jit",
+        theme: {
+          colors: {
+            gray: colors.blueGray,
+            teal: colors.teal,
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-gray-200 text-gray-700;
+        }
+      }
+
+      @layer components {
+        .card {
+          @apply w-80 bg-white m-8 p-8 rounded-md;
+        }
+        img {
+          @apply w-20 h-20 object-cover rounded-full;
+        }
+        a {
+          @apply font-bold text-teal-700;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--Making everything center aligned horizontally-->
+    <div class="card h-96 grid content-between justify-items-center">
+      <img src="https://picsum.photos/400/300?5" alt="" />
+      <p>
+        <strong>Matt Cooper</strong> is a graphic designer at CircleAi. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+      <a href="#">View Profile</a>
+    </div>
+  </body>
+</html>
