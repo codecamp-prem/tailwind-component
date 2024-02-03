@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Rokkitt:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Services Grid Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const colors = require("tailwindcss/colors");
+      tailwind.config = {
+        mode: "jit",
+        theme: {
+          colors: {
+            gray: colors.blueGray,
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-gray-100 text-gray-700;
+        }
+      }
+
+      @layer components {
+        .container {
+          @apply max-w-4xl mx-auto my-12 bg-white p-8;
+        }
+        h3 {
+          @apply font-bold text-xl;
+        }
+        img {
+          @apply h-20 w-20 object-cover rounded;
+        }
+        span {
+          @apply text-gray-500 text-sm;
+        }
+        input {
+          @apply mt-1 py-1 border border-gray-500;
+        }
+        .price {
+          @apply text-lg font-bold text-right;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="container grid grid-cols-[repeat(4,auto)] gap-y-8 gap-x-4 justify-between"
+    >
+      <img
+        src="https://images.pexels.com/photos/8148587/pexels-photo-8148587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100"
+        alt=""
+      />
+      <div class="desc">
+        <h3>Stylish Tote Bag</h3>
+        <p>Brown Color Women's Tote Bag</p>
+        <span>#368798</span>
+      </div>
+      <div>
+        <label>Quantity :</label>
+        <input type="text" value="1" size="1" />
+      </div>
+      <div class="price">$99.00</div>
+      <img
+        src="https://images.pexels.com/photos/1362558/pexels-photo-1362558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100"
+        alt=""
+      />
+      <div>
+        <h3>Sunglasses</h3>
+        <p>Glasses with wooden frame</p>
+        <span>#756328</span>
+      </div>
+      <div>
+        <label>Quantity :</label>
+        <input type="text" value="1" size="1" />
+      </div>
+      <div class="price">$142.00</div>
+    </div>
+  </body>
+</html>
