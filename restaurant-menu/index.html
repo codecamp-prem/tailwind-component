@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Rokkitt:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Quick Bites Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const colors = require("tailwindcss/colors");
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Mulish", "sans-serif"],
+            mono: ["Rokkitt", "monospace"],
+          },
+          colors: {
+            teal: colors.teal,
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-sky-100 text-gray-800;
+        }
+      }
+      @layer components {
+        .container {
+          @apply w-[30rem] m-16 p-8 bg-white;
+        }
+        .item {
+          @apply pb-5;
+        }
+        h3 {
+          @apply font-bold text-xl;
+        }
+        .icon {
+          @apply text-5xl pl-4;
+        }
+        p {
+          @apply mt-1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--1st column to occupy as much space as possible: 1fr-->
+    <!--2nd column to occupy ONLY a much space as Needed : auto-->
+    <div class="container grid grid-cols-[1fr,auto]">
+      <div class="item">
+        <h3>Veg Burger</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit atque
+          hic eligendi
+        </p>
+      </div>
+      <span class="icon"> 🍔 </span>
+      <div class="item">
+        <h3>Tacos</h3>
+        <p>
+          Quos sunt non labore ab dicta ea sequi error, sapiente asperiores
+          quas.
+        </p>
+      </div>
+      <span class="icon"> 🌮 </span>
+      <div class="item">
+        <h3>Classic Waffles</h3>
+        <p>
+          Dolorem nesciunt minima reprehenderit natus nam ipsum ipsa,
+          laudantium.
+        </p>
+      </div>
+      <span class="icon"> 🧇 </span>
+    </div>
+  </body>
+</html>
