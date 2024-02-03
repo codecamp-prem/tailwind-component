@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Grid Col-Span Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const colors = require("tailwindcss/colors");
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: "Karla",
+          },
+          colors: {
+            gray: colors.blueGray,
+            teal: colors.teal,
+            lime: colors.lime,
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-gray-200 text-gray-700 p-8;
+        }
+      }
+
+      @layer components {
+        .container {
+          @apply max-w-2xl mx-auto;
+        }
+        .container > div {
+          @apply p-10;
+        }
+        ul {
+          @apply mt-3 text-sm;
+        }
+        .component-header {
+          @apply bg-white text-gray-500;
+        }
+        .subscription {
+          @apply bg-teal-500 text-white;
+        }
+        .why {
+          @apply bg-teal-400 text-white;
+        }
+        h2 {
+          @apply font-bold text-3xl text-teal-600;
+        }
+        h3 {
+          @apply font-bold text-xl;
+        }
+        .component-header h3 {
+          @apply text-[#c0df34] my-4;
+        }
+        .price {
+          @apply inline-block mt-2.5 align-middle font-bold text-4xl;
+        }
+        .per {
+          @apply inline-block mt-2.5 align-middle pl-3;
+        }
+        #sign-up {
+          @apply mt-6 block py-3 px-6 text-center bg-[#c0df34] rounded font-bold;
+        }
+        p {
+          @apply mt-1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container grid sm:grid-cols-2">
+      <div class="component-header col-span-2">
+        <h2>Join our community</h2>
+        <h3>30-day, hassle-free money back guarantee</h3>
+        <p>
+          Gain access to our full library of tutorials along with expert code
+          reviews. Perfect for any developers who are serious about honing their
+          skills.
+        </p>
+      </div>
+      <div class="subscription">
+        <h3>Monthly Subscription</h3>
+        <span class="price">$29</span><span class="per">per month</span>
+        <p>Full access for less than $1 a day</p>
+        <a href="#" id="sign-up">Sign Up</a>
+      </div>
+      <div class="why">
+        <h3>Why Us</h3>
+        <ul>
+          <li>Tutorials by industry experts</li>
+          <li>Peer & expert code review</li>
+          <li>Coding exercises</li>
+          <li>Access to our GitHub repos</li>
+          <li>Community forum</li>
+          <li>Flashcard decks</li>
+          <li>New videos every week</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
