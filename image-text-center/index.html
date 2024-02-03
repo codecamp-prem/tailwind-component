@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Rokkitt:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Twitter Tweet Design Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const colors = require("tailwindcss/colors");
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Mulish", "sans-serif"],
+            mono: ["Rokkitt", "monospace"],
+          },
+          colors: {
+            gray: colors.blueGray,
+            teal: colors.teal,
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply text-gray-700;
+        }
+      }
+
+      @layer components {
+        .container {
+          @apply max-w-none w-auto p-12;
+        }
+        h1 {
+          @apply text-4xl leading-tight;
+        }
+        p {
+          @apply mt-4;
+        }
+        button {
+          @apply inline-block mt-4 py-3 px-9 bg-red-500 text-white font-bold rounded-full;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container min-h-screen flex items-center gap-16">
+      <div class="flex-1">
+        <img
+          src="https://res.cloudinary.com/thirus/image/upload/v1634585194/images/details-1_e7ojp9.svg"
+          alt=""
+        />
+      </div>
+      <div class="flex-1">
+        <h1>
+          Perfect solution<br />
+          <strong>for your small business</strong>
+        </h1>
+        <p>
+          Maecenas fringilla quam posuere, pellentesque est nec, gravida turpis.
+          Integer vitae mollis felis. Integer id quam id tellus hendrerit
+          laciniad binfer
+        </p>
+        <p>
+          Sed id dui rutrum, dictum urna eu, accumsan turpis. Fusce id auctor
+          velit, sed viverra dui rem dina
+        </p>
+        <button>Modal</button>
+      </div>
+    </section>
+  </body>
+</html>
